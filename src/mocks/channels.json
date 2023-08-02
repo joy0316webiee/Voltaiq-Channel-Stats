@@ -1,21 +1,27 @@
-[{
-  "name": "Channel 1",
-  "id": "bb20a4f7-b755-487d-966c-404d2cf3cd23",
-  "status": "running"
-},{
-  "name": "Channel 2",
-  "id": "c2781177-995b-4013-9ade-b6f8d53e7bf1",
-  "status": "running"
-},{
-  "name": "Channel 3",
-  "id": "ad966619-ffab-47ce-82d7-5f72b5adb95b",
-  "status": "stopped"
-},{
-  "name": "Channel 4",
-  "id": "f7e8283a-6d77-49df-9ec6-96aa413d39d1",
-  "status": "running"
-},{
-  "name": "Channel 5",
-  "id": "0b0d7a04-fe81-40a4-8e95-8fb5e6631a47",
-  "status": "stopped"
-}]
+[
+  {
+    "name": "Channel 1",
+    "id": "bb20a4f7-b755-487d-966c-404d2cf3cd23",
+    "status": "running"
+  },
+  {
+    "name": "Channel 2",
+    "id": "c2781177-995b-4013-9ade-b6f8d53e7bf1",
+    "status": "running"
+  },
+  {
+    "name": "Channel 3",
+    "id": "ad966619-ffab-47ce-82d7-5f72b5adb95b",
+    "status": "stopped"
+  },
+  {
+    "name": "Channel 4",
+    "id": "f7e8283a-6d77-49df-9ec6-96aa413d39d1",
+    "status": "running"
+  },
+  {
+    "name": "Channel 5",
+    "id": "0b0d7a04-fe81-40a4-8e95-8fb5e6631a47",
+    "status": "stopped"
+  }
+]
