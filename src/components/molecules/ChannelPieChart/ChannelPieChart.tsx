@@ -1,4 +1,5 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import CircularProgress from "@mui/material/CircularProgress";
 import cn from "clsx";
 
 // components
@@ -18,6 +19,7 @@ const ChannelPieChart = ({
   title,
   data = [],
   colors = [],
+  loading = false,
 }: PieChartProps) => {
   const styles = useStyles();
 
@@ -58,23 +60,28 @@ const ChannelPieChart = ({
       <Heading className={styles.title} level="sm" weight={fontWeight.MEDIUM}>
         {title}
       </Heading>
-      <ResponsiveContainer>
-        <PieChart>
-          <Pie
-            data={data}
-            cx="50%"
-            cy="50%"
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={120}
-            dataKey="value"
-          >
-            {data.map((__, idx) => (
-              <Cell key={`cell-${idx}`} fill={colors[idx % colors.length]} />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
+      {loading ? (
+        <CircularProgress className={styles.chartLoader} />
+      ) : (
+        <ResponsiveContainer>
+          <PieChart>
+            <Pie
+              data={data}
+              cx="50%"
+              cy="50%"
+              labelLine={false}
+              label={renderCustomizedLabel}
+              outerRadius={120}
+              dataKey="value"
+            >
+              {data.map((__, idx) => (
+                <Cell key={`cell-${idx}`} fill={colors[idx % colors.length]} />
+              ))}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+      )}
+
       <ul className={styles.legendContainer}>
         {data.map(({ name }, idx) => (
           <li key={idx} className={styles.legend}>

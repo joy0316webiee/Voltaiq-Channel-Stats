@@ -11,4 +11,5 @@ export interface DataTableProps extends XDataGridProps {
   initialState?: GridInitialState;
   pageSizeOptions?: number[];
   checkboxSelection?: boolean;
+  loading?: boolean;
 }

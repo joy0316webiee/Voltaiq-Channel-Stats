@@ -14,6 +14,8 @@ const DataTable = ({
   initialState,
   pageSizeOptions,
   checkboxSelection = false,
+  loading = false,
+  ...rest
 }: DataTableProps) => {
   const styles = useStyles();
 
@@ -25,6 +27,8 @@ const DataTable = ({
       initialState={initialState}
       pageSizeOptions={pageSizeOptions}
       checkboxSelection={checkboxSelection}
+      loading={loading}
+      {...rest}
     />
   );
 };

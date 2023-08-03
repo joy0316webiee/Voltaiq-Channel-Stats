@@ -73,6 +73,7 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-shadow": "off",
     "react/function-component-definition": "off",
     "react/prop-types": "off",
     "react/button-has-type": [

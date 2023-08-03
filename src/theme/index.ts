@@ -19,7 +19,7 @@ export const theme = createTheme({
   },
   palette: {
     primary: {
-      main: colors.black100,
+      main: colors.primary,
     },
     secondary: {
       main: colors.black200,

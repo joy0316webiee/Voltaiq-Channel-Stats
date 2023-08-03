@@ -15,6 +15,12 @@ export const useStyles = makeStyles((theme: Theme) =>
     title: {
       color: theme.palette.grey[400],
     },
+    chartLoader: {
+      position: "absolute",
+      left: "50%",
+      top: 100,
+      transform: "translateX(-50%)",
+    },
     legendContainer: {
       position: "absolute",
       right: 0,
