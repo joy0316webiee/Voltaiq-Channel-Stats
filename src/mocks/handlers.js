@@ -53,15 +53,15 @@ export const handlers = [
       ctx.json(
         results.map((b) => {
           const _batteries = batteries.filter(
-            (bat) => bat.batch === `${b.channel}-${b.date}`,
+            (bat) => bat.batch === `${b.channel}-${b.date}`
           );
           return {
             ...b,
             passing: _batteries.filter((bat) => bat.qc_pass).length,
             failing: _batteries.filter((bat) => !bat.qc_pass).length,
           };
-        }),
-      ),
+        })
+      )
     );
   }),
 
@@ -83,7 +83,7 @@ export const handlers = [
     if (!startDate || !endDate) {
       return res(
         ctx.status(400),
-        ctx.json({ error: "startDate and endDate are required" }),
+        ctx.json({ error: "startDate and endDate are required" })
       );
     }
 
@@ -100,10 +100,10 @@ export const handlers = [
       byChannel: channels.map((channel) => ({
         channel: channel.id,
         passing: passing.filter((battery) =>
-          battery.batch.startsWith(channel.id),
+          battery.batch.startsWith(channel.id)
         ).length,
         failing: failing.filter((battery) =>
-          battery.batch.startsWith(channel.id),
+          battery.batch.startsWith(channel.id)
         ).length,
       })),
     };
