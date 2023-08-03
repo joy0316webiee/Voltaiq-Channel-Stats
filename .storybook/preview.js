@@ -2,15 +2,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 
 // theme
-// import { theme } from '../src/theme';
+import { theme } from '../src/theme';
 
 export const decorators = [
   Story => (
     <StyledEngineProvider injectFirst>
-      {/* <ThemeProvider theme={theme}> */}
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Story />
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </StyledEngineProvider>
   ),
 ];
